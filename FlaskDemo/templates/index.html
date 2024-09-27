@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Welcome to Book Reviews!</h1>
+    <hr/>
+    <!-- Loop through the reviews and provide details here -->
+    <div>
+        {% for review in reviews %}
+        <div style="text-align: center; border: 1px solid grey; padding: 0 10px; margin: 10px 30%">
+            <h2 style="text-align: left">Title: {{review.book_title}}</h2>
+            <h5 style="text-align: left">{{review.score}} / 5</h2>
+            <p style="text-align: left">{{review.review_text}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
